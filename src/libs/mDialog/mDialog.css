@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/**
+ * @mDialog ui  
+ * @authors serge
+ * @date    2015-10-23 13:22:28
+ * @version 1.0.0
+ */
+.mDialog-ui { background: #fff;max-width: 15rem; padding: .5rem; text-align: center; min-height: 1rem; line-height: 1rem; border-radius: 5px 5px  0 0; }
+.mDialog-btns { background: #fff;max-width: 15rem; min-height: 2rem; line-height: 2rem;border-radius: 0 0 5px 5px; border-top: 1px solid #eee;overflow: hidden; }
+.mDialog-btn { text-align: center;  min-height: 2rem; line-height: 2rem;border-bottom: 1px solid #ddd; box-sizing: border-box;width: 100%; }
+.mDialog-btn-ok { width: 50%; float: left; border-bottom: none; }
+.mDialog-btn-focus{width: 100%;}
+.mDialog-btn-cancle { width: 50%; float: right; border-bottom: none; border-left:1px solid #eee;}
+.mDialog-btn a { display: block; width: auto; font-size: .8rem;color: #0099ff;}
+.mDialog-btn a:active{background: #f0f0f0;}
+.mDialog-btn:last-child { border-bottom: none; }
+.mDialog-btns-flex { display: block; }

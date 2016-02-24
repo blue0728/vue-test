@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "authors": [
+    "serge"
+  ],
+  "description": "test des",
+  "main": "main.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "test",
+    "keywords"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "dependencies": {
+    "vue": "~1.0.15",
+    "vue-resource": "~0.6.1",
+    "vue-router": "~0.7.9"
+  }
+}

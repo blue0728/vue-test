@@ -1,0 +1,41 @@
+/*登录 @serge*/
+.login-box {
+    background: #f3f3f3;
+}
+.login-box input.mobile {
+    font-size: .7rem;
+
+    width: 16rem;
+    height: 2rem;
+    padding: 0 .5rem;
+
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+.login-box p {
+    line-height: 2rem;
+
+    padding: 0 .5rem;
+}
+
+.login-box div {
+    font-size: .7rem;
+    line-height: 2rem;
+
+    height: 2rem;
+    padding: 0 .5rem;
+
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.login-box div input.user,
+.login-box div input.password {
+    width: 9.5rem;
+    padding: 0 .5rem;
+
+    border: none;
+    border-radius: 0;
+}
+.login-btn {
+    margin-top: 1rem;
+}

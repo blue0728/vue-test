@@ -1,0 +1,194 @@
+@charset 'UTF-8';
+.comment-list-box{
+    padding-bottom: 2.35rem;
+}
+.issue-comment,
+.order-score {
+    padding: .5rem;
+
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.order-score {
+    border-bottom: none;
+}
+.order-score p {
+    text-align: right;
+}
+.issue-comment img.fl {
+    display: block;
+
+    width: 2.56rem;
+    height: 2.56rem;
+    margin-left: .7rem;
+}
+.issue-comment p.fl {
+    width: 10.5rem;
+    margin-left: .5rem;
+}
+.product-score {
+    line-height: 1rem;
+
+    height: 1rem;
+    margin: .5rem 0;
+}
+.product-score em {
+    display: inline-block;
+
+    vertical-align: text-top;
+}
+.product-score i {
+    display: inline-block;
+
+    padding-left: .3rem;
+}
+.product-score .star {
+    text-align: right;
+}
+.product-score .star button {
+    font-size: 0;
+    line-height: 0;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: .88rem;
+    height: .88rem;
+    margin-left: .4rem;
+
+    vertical-align: top;
+
+    color: #fff;
+    border: none;
+    background: url(../images/star-null-1.png) center no-repeat;
+    background-size: .88rem;
+}
+.product-score .star button.full {
+    display: inline-block;
+
+    width: .88rem;
+    height: .88rem;
+    margin-left: .4rem;
+
+    vertical-align: top;
+
+    color: #f90;
+    border: none;
+    background: url(../images/star-full-1.png) center no-repeat;
+    background-size: .88rem;
+}
+.product-text textarea {
+    line-height: .9rem;
+
+    width: 14.3rem;
+    padding: .4rem;
+
+    text-indent: 0;
+
+    border: none;
+    background: #f3f3f3;
+}
+.product-text em {
+    vertical-align: top;
+}
+.add-comment-img {
+    margin-bottom: .5rem;
+    padding: .5rem .5rem .5rem 1.2rem;
+
+    background: #fff;
+}
+.add-img {
+    position: relative;
+
+    width: 2.26rem;
+    height: 2.26rem;
+
+    background: url(../images/add-img.png) center no-repeat;
+    background-size: 2.1rem;
+}
+.add-img input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 2.26rem;
+    height: 2.26rem;
+
+    opacity: 0;
+}
+.add-comment-img p {
+    width: 11.5rem;
+    padding-top: .3rem;
+}
+.img-list {
+    position: relative;
+
+    width: 2.26rem;
+    height: 2.26rem;
+    margin-right: .3rem;
+    margin-bottom: .3rem;
+}
+.img-list img {
+    width: 2.26rem;
+    height: 2.26rem;
+}
+.remove-img {
+    line-height: .6rem;
+
+    position: absolute;
+    z-index: 100;
+    top: -.3rem;
+    right: -.3rem;
+
+    display: block;
+
+    width: .6rem;
+    height: .6rem;
+
+    text-align: center;
+
+    color: #fff !important;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.submit-comment {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+
+    width: 16rem;
+    height: 2.35rem;
+    padding: 0 .5rem;
+
+    border-top: 1px solid #e0e0e0;
+    background: #f7f7f7;
+}
+.submit-comment button.i-select {
+    display: block;
+
+    height: 2.35rem;
+    padding-left: 1rem;
+
+    border: none;
+    background: url(../images/yes.png) center left no-repeat;
+    background-size: .85rem;
+}
+.submit-comment button.i-null {
+    background: url(../images/no.png) center left no-repeat;
+    background-size: .85rem;
+}
+.submit-comment a {
+    line-height: 1.7rem;
+
+    width: 3.84rem;
+    height: 1.7rem;
+    margin: .3rem 0 0 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 5px;
+    background: #ff5657;
+}

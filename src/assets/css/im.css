@@ -1,0 +1,290 @@
+/*环信IM*/
+html,
+body {
+    height: 100%;
+
+    background: #fff;
+}
+.layout {
+    height: 100%;
+}
+.im-box {
+    box-sizing: border-box;
+    width: 16rem;
+    min-height: 100%;
+    padding-bottom: 3rem;
+
+    background: #f3f3f3;
+}
+.upload-img {
+    position: relative;
+
+    width: 1.5rem;
+    height: 1.6rem;
+
+    background: url(../images/im-upload.png) center left no-repeat;
+    background-size: .94rem;
+}
+.upload-img input {
+    position: absolute;
+    z-index: 100;
+
+    width: 1.5rem;
+    height: 1.6rem;
+
+    opacity: 0;
+}
+.goshop {
+    position: fixed;
+    right: .5rem;
+    bottom: 4rem;
+
+    display: block;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 100%;
+    background: url(../images/shop-black.png) center no-repeat;
+    background-size: 2rem;
+}
+.im-send-box {
+    position: fixed;
+    bottom: 0;
+
+    overflow: hidden;
+
+    width: 16rem;
+    padding: .3rem .5rem;
+
+    background: #fff;
+}
+#sendText {
+    line-height: 1rem;
+
+    display: block;
+
+    width: 10.5rem;
+    padding: .3rem;
+
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background: #f0f0f0;
+}
+.im-loading {
+    line-height: 1rem;
+
+    padding: .5rem;
+
+    text-align: center;
+}
+.im-loading span {
+    display: inline-block;
+
+    padding: .15rem .5rem .15rem 1.5rem;
+
+    cursor: pointer;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #cfcfcf url(../images/loading-page.gif) .5rem center no-repeat;
+    background-size: .7rem;
+}
+.im-loading span.history {
+    padding: .15rem .5rem;
+
+    background: #cfcfcf;
+}
+.send-btn {
+    line-height: 1.6rem;
+
+    display: block;
+
+    width: 2.5rem;
+    height: 1.6rem;
+
+    text-align: center;
+
+    color: #fff !important;
+    border-radius: 3px;
+    background: #ff5657;
+}
+.im-msg-lis {
+    line-height: 1rem;
+
+    padding: .5rem;
+}
+.msg-left,
+.msg-right {
+    overflow: hidden;
+}
+.msg-left .msg-avatar,
+.msg-left .msg-content {
+    float: left;
+}
+.msg-right .msg-avatar,
+.msg-right .msg-content {
+    float: right;
+}
+.msg-avatar {
+    display: block;
+
+    width: 2rem;
+    height: 2rem;
+
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+.msg-content {
+    position: relative;
+
+    max-width: 11rem;
+    margin: .5rem .7rem;
+    padding: .5rem;
+
+    border-radius: 3px;
+    background: #fff;
+}
+.msg-right .msg-content {
+    color: #fff;
+    background: #fd8e8f;
+}
+.arrow-left {
+    position: absolute;
+    top: .6rem;
+    left: -.5rem;
+
+    width: 0;
+    height: 0;
+
+    border-top: .1rem solid transparent;
+    border-right: .5rem solid #fff;
+    border-bottom: .3rem solid transparent;
+}
+.arrow-right {
+    position: absolute;
+    top: .6rem;
+    right: -.5rem;
+
+    width: 0;
+    height: 0;
+
+    border-top: .1rem solid transparent;
+    border-bottom: .3rem solid transparent;
+    border-left: .5rem solid #fd8e8f;
+}
+.msg-emotion {
+    width: .8rem;
+    height: .8rem;
+    margin: 0 .02rem;
+
+    vertical-align: middle;
+}
+.msg-content audio {
+    width: 9rem;
+}
+.msgimg {
+    display: block;
+}
+.progress {
+    font-size: .6rem;
+    line-height: 1rem;
+
+    height: 1rem;
+    margin-bottom: -.3rem;
+}
+.progress span.fl {
+    padding-left: .8rem;
+
+    background: url(../images/loading-page.gif) left center no-repeat;
+    background-size: .7rem;
+}
+.send-cus {
+    width: 12rem;
+    margin: 0 auto .5rem auto;
+    padding: .5rem;
+
+    border-radius: 5px;
+    background-color: #fff;
+}
+.send-cus div.fr {
+    width: 7.5rem;
+}
+.send-cus div.fr p.text {
+    line-height: .75rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+
+    height: 1.45rem;
+
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.send-cus div.fr p.price {
+    margin-top: .3rem;
+}
+.send-cus img.fl {
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+}
+.msg-order {
+    line-height: 1rem;
+
+    margin-bottom: .2rem;
+}
+.send-cus-msg {
+    margin-top: .5rem;
+    padding-top: .3rem;
+
+    cursor: pointer;
+    text-align: center;
+
+    border-top: 1px solid #eee;
+}
+
+.cur-msg .msg-content img {
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+}
+.cur-msg div.cle {
+    width: 9rem;
+}
+.msg-right div.cle a {
+    color: #fff;
+}
+.cur-msg div.fr {
+    width: 5.5rem;
+}
+.cur-msg div.fr p.text {
+    line-height: .75rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+
+    height: 1.45rem;
+
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.cur-msg div.fr p.price {
+    margin-top: .3rem;
+}
+.cur-msg div.order-no {
+    padding-bottom: .2rem;
+}
+.emotion {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .1rem;
+
+    vertical-align: middle;
+}

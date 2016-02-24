@@ -1,0 +1,96 @@
+/*上传清关证明 @serge*/
+
+.upload_proof_hd {
+    line-height: 2.2rem;
+
+    margin: .5rem 0;
+
+    background: #fff;
+}
+.upload_proof_hd div {
+    padding: 0 .5rem;
+
+    border-bottom: 1px solid #eee;
+}
+.upload_proof_hd div strong {
+    display: inline-block;
+
+    width: 4rem;
+}
+.upload_proof_hd div input {
+    width: 10rem;
+    padding: .3rem 0;
+
+    border: none;
+}
+.upload_proof_bd {
+    margin-bottom: .5rem;
+    padding: .5rem;
+
+    background: #fff;
+}
+.upload_proof_bd_t {
+    line-height: 1.5rem;
+}
+.upload_proof_bd_t strong {
+    display: inline-block;
+}
+.proof_box {
+    overflow: hidden;
+}
+.proof_box div {
+    width: 50%;
+    height: 6rem;
+}
+.proof_box div img.proof_result {
+    position: absolute;
+    z-index: 0;
+    top: .5rem;
+    left: 0;
+
+    width: 7rem;
+    height: 4.6rem;
+}
+.proof_box div.fl {
+    background-image: url(../images/add-pic.png);
+    background-repeat: no-repeat;
+    background-position: left .5rem;
+    background-size: 7rem;
+}
+.proof_box div.fl p {
+    position: relative;
+
+    width: 100%;
+    height: 6rem;
+}
+.proof_box div.fr {
+    background-image: url(../images/front.png);
+    background-repeat: no-repeat;
+    background-position: right .5rem;
+    background-size: 7rem;
+}
+.proof_box div.proof_back {
+    background-image: url(../images/back.png);
+    background-repeat: no-repeat;
+    background-position: right .5rem;
+    background-size: 7rem;
+}
+input[type=file] {
+    position: absolute;
+    z-index: 1;
+
+    display: block;
+
+    width: 7rem;
+    height: 6rem;
+
+    opacity: 0;
+}
+.upload_proof .submit {
+    padding: 0 .5rem;
+}
+.upload_text {
+    line-height: 1rem;
+
+    padding: .4rem;
+}

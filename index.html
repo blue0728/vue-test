@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>微店-海蜜全球购</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="email=no" name="format-detection" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="微店-海蜜全球购">
+	<link rel="apple-touch-icon" href="/static/shop/images/ios-logo.jpeg" />
+    <link rel="stylesheet" href="http://192.168.4.54:8023/dist/app.css">
+    <script>
+	//自适应方案
+	;(function(win) {
+		var doc = win.document;
+	    var docEl = doc.documentElement;
+	    var dpr = 0;
+	    var tid = 0;
+
+	    var isAndroid = win.navigator.appVersion.match(/android/gi);
+        var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        var devicePixelRatio = win.devicePixelRatio;
+        if (isIPhone) {
+            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+            if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
+                dpr = 2;
+            } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
+                dpr = 2;
+            } else {
+                dpr = 1;
+            }
+        } else {
+            // 其他设备下，仍旧使用1倍的方案
+            dpr = 1;
+        }
+
+	    function refreshRem(){
+	        var width = docEl.getBoundingClientRect().width;
+	        if (width > 750) {
+	            width = 750;
+	        }
+	        var rem = width / 16;
+	        docEl.style.fontSize = rem + 'px';
+	    }
+
+	    win.addEventListener('resize', function() {
+	        clearTimeout(tid);
+	        tid = setTimeout(refreshRem, 300);
+	    }, false);
+	    win.addEventListener('pageshow', function(e) {
+	        if (e.persisted) {
+	            clearTimeout(tid);
+	            tid = setTimeout(refreshRem, 300);
+	        }
+	    }, false);
+
+	    refreshRem();
+
+	    docEl.setAttribute('data-dpr', dpr);
+	})(window);
+	</script>
+	<script type="text/javascript">
+		var ua = navigator.userAgent.toLocaleLowerCase(),
+				isHaimi = ua.indexOf('haimi') >= 0,
+				isWeixin = ua.indexOf('micromessenger') >= 0,
+				isQQ = ua.indexOf('qq') >= 0,
+				isWeibo = ua.indexOf('weibo') >= 0,
+				isMibao = ua.indexOf('mibao') >= 0,
+				isAndroid = ua.indexOf("android") >= 0 || ua.indexOf("linux") >= 0,
+				inMobile = !!ua.match(/applewebkit.*mobile.*/) || ua.indexOf("android") >= 0;
+		var  Global = {		  //全局变量
+			hm: isHaimi,
+			wx: isWeixin,
+			qq: isQQ,
+			wb: isWeibo,
+			mb: isMibao,
+			Android: isAndroid,
+			inApp : (isMibao || isHaimi ) ,
+			inMobile: inMobile
+		}
+	</script>
+</head>
+<body>
+<div id="app" class="layout">
+  <router-view></router-view>
+</div>
+<script src="http://192.168.4.54:8023/webpack-dev-server.js"></script>	
+<script src="http://192.168.4.54:8023/dist/app.js"></script>
+<script>
+FastClick.attach(document.body);
+</script>  
+</body>
+</html>

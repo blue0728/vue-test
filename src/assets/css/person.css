@@ -1,0 +1,395 @@
+/*个人中心 @black*/
+.person-name {
+    height: 4.2rem;
+    padding: .6rem .5rem;
+
+    background: #fff;
+}
+.person-name img {
+    display: inline-block;
+
+    width: 3rem;
+    height: 3rem;
+    margin-right: .5rem;
+
+    vertical-align: top;
+
+    border-radius: 100%;
+}
+.person-name span {
+    line-height: 3rem;
+
+    display: inline-block;
+    overflow: hidden;
+
+    max-width: 10rem;
+    height: 3rem;
+    padding-right: 1rem;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    background: url(../images/no-def.png) right center no-repeat;
+    background-size: .64rem;
+}
+.perosn-boxs {
+    margin-top: .5rem;
+    margin-bottom: .75rem;
+
+    background-color: #fff;
+}
+.perosn-boxs li {
+    position: relative;
+
+    float: left;
+
+    width: 33.333%;
+    height: 5.5rem;
+}
+.perosn-boxs li a {
+    display: block;
+
+    width: 100%;
+    height: 5.5rem;
+
+    background-repeat: no-repeat;
+    background-position: center 1.1rem;
+    background-size: 1.8rem;
+}
+.perosn-boxs li a p {
+    padding-top: 3.5rem;
+
+    text-align: center;
+}
+.perosn-boxs .order a {
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-image: url(../images/my-order-ico.png);
+}
+.perosn-boxs .fav a {
+    border-bottom: 1px solid #eee;
+    background-image: url(../images/my-collection-ico.png);
+}
+.perosn-boxs .bonus a {
+    border-right: 1px solid #eee;
+    background-image: url(../images/my-coupon-ico.png);
+}
+.perosn-boxs .cart a {
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-image: url(../images/my-cart-ico.png);
+}
+.perosn-boxs .myPinme a {
+    border-right: 1px solid #eee;
+    background-image: url(../images/my-pinme-ico.png);
+}
+.perosn-boxs .order i {
+    font-size: .7rem;
+    line-height: 1rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+
+    display: inline-block;
+
+    min-width: 1rem;
+    height: 1rem;
+    padding: 0 .2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 1rem;
+    background-color: red;
+}
+.whitebtn {
+    line-height: 2.2rem;
+
+    display: block;
+
+    width: 100%;
+    height: 2.2rem;
+
+    text-align: center;
+
+    background: #fff;
+}
+.edit-name {
+    width: 11rem;
+    padding: .5rem 1rem;
+}
+.edit-name h3 {
+    line-height: 1rem;
+
+    text-align: center;
+}
+.edit-name input.NickName {
+    width: 100%;
+    padding: .3rem .2rem;
+
+    text-align: center;
+
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background: #eee;
+}
+.edit-name p {
+    margin-top: .5rem;
+
+    text-align: center;
+}
+.person-name span.avatar-box {
+    position: relative;
+
+    display: inline-block;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    margin-right: 1rem;
+
+    background: none;
+}
+.person-name span.avatar-box input {
+    position: absolute;
+    z-index: 100;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+
+    opacity: 0;
+}
+/*个人收藏 @black*/
+.fav-product-list {
+    background: #fff;
+}
+.fav-product-list li {
+    margin-left: .512rem;
+    padding: .64rem .533rem .64rem 0;
+
+    border-bottom: 1px solid #eee;
+}
+.fav-product-list li a.fl {
+    position: relative;
+}
+.fav-product-list li a span {
+    line-height: .704rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    height: .704rem;
+
+    text-align: center;
+
+    border-radius: 0 0 .1rem .1rem;
+    background: rgba(0,0,0,.4);
+}
+.fav-product-list li div {
+    position: relative;
+
+    width: 10.8rem;
+    height: 3.584rem;
+    margin-left: .5rem;
+}
+.fav-product-list li p.p-subject {
+    line-height: .853rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+
+    height: 1.6rem;
+
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.fav-product-list li p.p-subject a {
+    display: block;
+
+    height: 1.6rem;
+}
+.fav-product-list li p.p_cz {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    text-align: right;
+}
+.fav-product-list li img {
+    display: block;
+
+    width: 3.584rem;
+    height: 3.584rem;
+
+    border: 1px solid #ccc;
+    border-radius: .1rem;
+}
+.fav-product-list li strong {
+    font-weight: normal;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.fav-product-list li p.p_tags {
+    font-size: .45rem;
+    line-height: .6rem;
+
+    margin-top: .22rem;
+}
+.fav-product-list li p.p_tags i {
+    display: block;
+    float: left;
+
+    width: .6rem;
+    height: .6rem;
+    margin-right: .5em;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.fav-product-list li p.p_tags i.t-hui {
+    background-image: url(../images/hui.png);
+}
+.fav-product-list li p.p_tags i.t-quan {
+    background-image: url(../images/quan.png);
+}
+.fav-product-list li p.p_cz i {
+    display: inline-block;
+
+    width: 1.5rem;
+    height: 1rem;
+}
+.fav-product-list li p.p_cz i.f-del {
+    background: url(../images/dele.png) center right no-repeat;
+    background-size: .72rem;
+}
+.fav-product-list li p.p_cz i.p-cart {
+    background: url(../images/add-cart.png) center right no-repeat;
+    background-size: .91rem;
+}
+/*红包优惠券*/
+.bonus-view {
+    background-color: #f7f7f7;
+}
+.bonus-nav {
+    display:    -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:         flex;
+
+    height: 1.536rem;
+
+    color: #808080;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+.bonus-nav li {
+    padding: 0 3.178rem;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+            flex: 1;
+}
+.bonus-nav li p {
+    line-height: 1.493rem;
+
+    text-align: center;
+}
+.bonus-nav li p.active {
+    color: #ff5657;
+    border-bottom: 2px solid #ff5657;
+}
+.bonus-nav c {
+    margin: .384rem 0;
+
+    border-right: 1px solid #bdbdbd;
+}
+.bonus-tip {
+    position: relative;
+
+    margin: 0 .512rem;
+    padding: 1.65rem .512rem .427rem;
+
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+.bonus-tip h2 {
+    position: absolute;
+    top: .512rem;
+    left: -.213rem;
+
+    padding: .085rem 1.067rem;
+
+    border-radius: .2rem;
+    background-color: #808080;
+}
+.bonus-tip p {
+    line-height: .747rem;
+
+    color: #b2b2b2;
+}
+.bonus-list {
+    margin: 0 .512rem;
+}
+.bonus-list li {
+    height: 2.709rem;
+    margin-top: .341rem;
+    padding: .512rem;
+    padding-right: .4rem;
+
+    border-radius: .2rem;
+    background-color: #fff;
+}
+.bonus-amount {
+    line-height: 1.685rem;
+
+    width: 3.413rem;
+    height: 1.685rem;
+    padding-left: .704rem;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.bonus-list li.active .bonus-amount {
+    background-image: url(../images/coupon-ok.png);
+}
+.bonus-list li.history .bonus-amount {
+    background-image: url(../images/coupon-no.png);
+}
+.bonus-list li i {
+    -webkit-transform: rotate(-20deg);
+       -moz-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+}
+.bonus-list li.active i {
+    font-size: .448rem;
+
+    width: 1.984rem;
+    margin-top: .3rem;
+}
+.bonus-list li.history i {
+    font-size: .7rem;
+
+    width: 2.1rem;
+    margin-top: .35rem;
+}
+.bonus-info {
+    margin-left: .512rem;
+}
+.bonus-info h2 {
+    margin: .149rem 0 .3rem;
+}

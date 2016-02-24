@@ -1,0 +1,544 @@
+@charset 'UTF-8';
+
+/**
+ * 
+ * @authors serge
+ * @date    2015-06-23 14:21:30
+ * @海蜜
+ */
+
+/*reset*/
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    font-family: Helvetica;
+
+    color: #333;
+    background-color: #f7f7f7;
+}
+html {
+    height: 100%;
+}
+body {
+    font-size: .6rem;
+
+    position: relative;
+
+    min-height: 100%;
+
+    background-image: url(../images/loading-page.gif);
+    background-repeat: no-repeat;
+    background-position: center 1rem;
+    background-size: 1.5rem;
+}
+html * {
+    box-sizing: border-box;
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    outline: 0;
+
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+i,
+em {
+    font-style: normal;
+}
+ul,
+ol {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+
+    border: 0;
+}
+table {
+    width: 100%;
+
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+select,
+input,
+textarea {
+    font-size: .6rem;
+
+    -webkit-appearance: none;
+}
+h1 {
+    font-weight: 400;
+}
+h2,
+h3,
+h4 {
+    font-weight: 200;
+}
+[v-cloak] {
+    display: none;
+}
+.fl {
+    display: inline-block;
+    float: left;
+}
+.fr {
+    display: inline-block;
+    float: right;
+}
+a,
+a:link,
+a:hover,
+a:active {
+    text-decoration: none;
+
+    color: #333;
+}
+.cle:after {
+    font-size: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '\20';
+}
+.img_error {
+    background-color: #ebebeb !important;
+    background-image: url(../images/default.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+input.text,
+textarea,
+select {
+    font-size: .6rem;
+    line-height: 1.6rem;
+
+    width: 100%;
+    height: 1.6rem;
+
+    text-indent: .5rem;
+
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+
+    -webkit-appearance: none;
+}
+textarea {
+    height: auto;
+
+    resize: none;
+}
+select {
+    padding: 0;
+}
+a[title='站长统计'] {
+    display: none;
+}
+.layout {
+    width: 16rem;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+}
+i.attribute {
+    line-height: 1;
+
+    display: inline-block;
+
+    margin-right: .2rem;
+    padding: .08rem .2rem;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #fc595b;
+}
+.error-text {
+    line-height: 2rem;
+
+    padding: 5rem 0;
+
+    text-align: center;
+}
+.wxlogin {
+    font-size: 1rem;
+    line-height: 5rem;
+
+    height: 5rem;
+
+    text-align: center;
+
+    background: #f3f3f3;
+}
+.load {
+    line-height: 1.5rem;
+
+    visibility: hidden;
+    clear: both;
+
+    height: 1.5rem;
+
+    text-align: center;
+}
+.load span {
+    display: inline-block;
+
+    padding-left: 1rem;
+
+    background: url(../images/loading-page.gif) center left no-repeat;
+    background-size: .8rem;
+}
+.arrows-right {
+    background-image: url(../images/arrows-right.png);
+    background-repeat: no-repeat;
+    background-position: 15.211rem center;
+    background-size: .277rem;
+}
+.padd {
+    padding-bottom: 2.5rem;
+}
+/*按钮*/
+a.redbtn {
+    font-size: .8rem;
+    line-height: 2rem;
+
+    display: block;
+
+    width: 100%;
+    height: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #ff5657;
+}
+a.redbtn:active {
+    color: #fff;
+    background: #d9494a;
+}
+a.bluebtn {
+    font-size: .8rem;
+    line-height: 2rem;
+
+    display: block;
+
+    width: 100%;
+    height: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #0096ff;
+}
+a.bluebtn:active {
+    color: #fff;
+    background: #0886de;
+}
+a.graybtn {
+    font-size: .8rem;
+    line-height: 2rem;
+
+    display: block;
+
+    width: 100%;
+    height: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #ccc;
+}
+a.graybtn:active {
+    color: #fff;
+    background: #b1b1b1;
+}
+a.orangebtn {
+    font-size: .8rem;
+    line-height: 2rem;
+
+    display: block;
+
+    width: 100%;
+    height: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #f90;
+}
+a.orangebtn:active {
+    color: #fff;
+    background: #f29203;
+}
+/*字体*/
+.c_999 {
+    color: #999 !important;
+}
+.c_666 {
+    color: #666 !important;
+}
+.c_333 {
+    color: #333 !important;
+}
+.c_ccc {
+    color: #ccc !important;
+}
+.c_fff {
+    color: #fff !important;
+}
+.blue {
+    color: #0096ff !important;
+}
+.red {
+    color: #ff5657 !important;
+}
+.f8 {
+    font-size: .4rem !important;
+}
+.f10 {
+    font-size: .5rem !important;
+}
+.f12 {
+    font-size: .6rem !important;
+}
+.f14 {
+    font-size: .7rem !important;
+}
+.f16 {
+    font-size: .8rem !important;
+}
+.f18 {
+    font-size: .9rem !important;
+}
+.f20 {
+    font-size: 1rem !important;
+}
+.f22 {
+    font-size: 1.1rem !important;
+}
+.f24 {
+    font-size: 1.2rem !important;
+}
+.f26 {
+    font-size: 1.3rem !important;
+}
+.f28 {
+    font-size: 1.4rem !important;
+}
+.f30 {
+    font-size: 1.5rem !important;
+}
+.f32 {
+    font-size: 1.6rem !important;
+}
+.f34 {
+    font-size: 1.7rem !important;
+}
+/*loading*/
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: -1.6rem;
+    margin-left: -1.6rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .7) url(../images/loading-page.gif) center no-repeat;
+    background-size: 40%;
+}
+/*加入购物车*/
+.pop-box {
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .3);
+}
+.product-sku-box {
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: #fff;
+}
+/*我的购物车*/
+.my-cart {
+    position: fixed;
+    z-index: 150;
+    right: .32rem;
+    bottom: 6rem;
+
+    width: 1.71rem;
+    height: 1.71rem;
+
+    border-radius: 100%;
+    background: url(../images/cart-ico.png) center no-repeat;
+    background-size: 100%;
+}
+.my-cart i {
+    font-size: .6rem;
+    line-height: .9rem;
+
+    position: absolute;
+    top: -.2rem;
+    right: -.1rem;
+
+    min-width: .9rem;
+    height: .9rem;
+    padding: 0 .2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: .9rem;
+    background: #ff5657;
+}
+/*回到顶部*/
+.to-top {
+    position: fixed;
+    z-index: 150;
+    right: .32rem;
+    bottom: 3.7rem;
+
+    width: 1.71rem;
+    height: 1.71rem;
+
+    border-radius: 100%;
+    background: url(../images/to-top.png) center no-repeat;
+    background-size: 100%;
+}
+/*头部*/
+.header {
+    position: absolute;
+    z-index: 999;
+    top: .683rem;
+
+    width: 16rem;
+}
+.header a {
+    display: block;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .64rem;
+
+    background-repeat: no-repeat;
+    background-size: 1.28rem;
+}
+.search-btn {
+    background-image: url(../images/search-ico.png);
+}
+.cate-btn {
+    background-image: url(../images/category-ico.png);
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+
+    border-top: 1px solid #d1d1d1;
+    background-color: #fff;
+}
+.footer ul {
+    width: 16rem;
+    height: 2.090rem;
+}
+.footer ul li {
+    float: left;
+
+    width: 25%;
+
+    text-align: center;
+}
+.footer ul li a {
+    font-size: .427rem;
+
+    display: block;
+
+    padding-top: 1.386rem;
+
+    color: #666;
+    background-repeat: no-repeat;
+    background-position: center .363rem;
+}
+.footer ul li.home a {
+    background-image: url('../images/home.png');
+    background-size: .853rem;
+}
+.footer ul li.contact a {
+    background-image: url('../images/contact-ico.png');
+    background-size: .832rem;
+}
+.footer ul li.order a {
+    background-image: url('../images/order-ico.png');
+    background-size: .683rem;
+}
+.footer ul li.person a {
+    background-image: url('../images/me-ico.png');
+    background-size: .832rem;
+}

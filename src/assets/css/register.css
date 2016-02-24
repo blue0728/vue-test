@@ -1,0 +1,28 @@
+/*注册 @serge*/
+.register-box {
+    line-height: 1.5rem;
+
+    padding: 0 .5rem;
+}
+.register-box div {
+    margin-bottom: .5rem;
+}
+.register-box input {
+    font-size: .7rem;
+    line-height: 2rem;
+
+    width: 100%;
+    height: 2rem;
+
+    text-indent: .5rem;
+
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background: #fff;
+}
+.register-box input.code {
+    width: 9.5rem;
+}
+.register-box .bluebtn {
+    width: 5rem;
+}
