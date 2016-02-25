@@ -24,20 +24,22 @@ min-width: 1rem;height: 1rem; padding: 0 .2rem; text-align: center;color: #fff;b
 <template>
 <div class="person-info-view" v-if="user">
 	<div class="person-name">
-        <span class="avatar-box"><input type="file" accept="image/*" class="avatar"/><img :src="user.Avatar | qiniu '5' '150' '150'"/></span><span class="f14" v-text="user.NickName"></span>
+        <span class="avatar-box"><input @change="upload" type="file" accept="image/*" class="avatar"/><img :src="user.Avatar | qiniu '5' '150' '150'"/></span><span class="f14" v-text="user.NickName" @click="editname"></span>
     </div>
 	<ul class="perosn-boxs cle">
-		<li class="order"><a href="/shop/order/list"><i v-if="total"></i><p class="f14 c_666">我的订单</p></a></li>
-		<li class="cart"><a href="/shop/cart/my-cart"><p class="f14 c_666">购物车</p></a></li>
-		<li class="fav"><a href="/shop/person/fav"><p class="f14 c_666">我的收藏</p></a></li>
-		<li class="bonus"><a href="/shop/person/bonus"><p class="f14 c_666">红包优惠券</p></a></li>
+		<li class="order"><a v-link="{name: 'order'}"><i v-if="total"></i><p class="f14 c_666">我的订单</p></a></li>
+		<li class="cart"><a v-link="{name: 'cart'}"><p class="f14 c_666">购物车</p></a></li>
+		<li class="fav"><a v-link="{name: 'favorite'}"><p class="f14 c_666">我的收藏</p></a></li>
+		<li class="bonus"><a v-link="{name: 'bonus'}"><p class="f14 c_666">红包优惠券</p></a></li>
 		<li v-if="hasGroupon == 'Y'" class="myPinme"><a href="/wap/group/pinme-list/s/wshop"><p class="f14 c_666">我的团</p></a></li>
 	</ul>
-	<a href="javascript:;" class="whitebtn logout f16 c_666" >退出登陆</a>
+	<a href="javascript:;" @click="logout" class="whitebtn logout f16 c_666" >退出登陆</a>
 	<foot :shop.sync="shop"></foot>
 </div>	
 </template>	
 <script>
+var tips = require('tips');
+var lrz = require('lrz');
 module.exports = {
 	ready: function(){
 		var that = this;	
@@ -48,6 +50,8 @@ module.exports = {
 					if(res.data.flag == 1){
 						that.user = res.data.data;
 						that.user.total = parseFloat(res.data.data.EscrowWaitBuyerPayall) + parseFloat(res.data.data.EscrowWaitSellerShip) + parseFloat(res.data.data.EscrowTakeoverArgue) + parseFloat(res.data.data.EscrowWaitTakeover);
+					}else if(res.data.flag == -100){
+						location.href = '/#!/login';
 					}
 				},
 				function(res){
@@ -74,7 +78,119 @@ module.exports = {
 			hasGroupon: 'N',
 			shop: {
 				MemberID: localStorage.id
-			}
+			},
+			token: ''
+		}
+	},
+	methods: {
+		logout: function(e){
+			var con = tips.confirm('<div class="f16" style="padding: .5rem 2.5rem;">确认退出登陆?</div>', function() {
+                $.ajax({
+                    url: '/api/member/logout',
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(data) {
+                    	con.close();
+                        if (data.flag == 1) {
+                            location.href = '/#!/' + localStorage.id;
+                        }
+                    }
+                });
+            })
+		},
+		editname: function(){
+			var that = this;
+			var tt = tips.confirm('<div class="edit-name f14"><h3>修改昵称</h3><p><input type="text" class="NickName"/></p></div>', function() {
+
+	            var name = $.trim($('.NickName').val());
+
+	            if (name == '') {
+	                return;
+	            }
+
+            	var load = tips.loading();
+
+	            $.ajax({
+	                url: '/api/member/set-seller-profile',
+	                type: 'post',
+	                dataType: 'json',
+	                data: {
+	                    NickName: name
+	                },
+	                complete: function() {
+	                    load.close();
+	                },
+	                success: function(data) {
+	                    if (data.flag == 1) {
+	                        tt.close();
+	                        tips.msg('修改成功');
+	                        that.user.NickName = name;
+	                    } else {
+	                        tips.msg(data.msg);
+	                    }
+	                },
+	                error: function(xhr) {
+	                    tips.msg('修改失败，刷新后重试' + xhr.status);
+	                }
+	            })
+	        });
+		},
+		upload: function(e){
+			var that = this;
+			var _this = $(e.currentTarget);
+			var file = _this[0].files[0];
+			var load = tips.loading();
+
+            lrz(file, {
+                quality: 0.5
+            }).then(function(rst) {
+                var pic = rst.base64.split(',')[1];
+	            var url = "http://up.qiniu.com/putb64/-1";
+	            var xhr = new XMLHttpRequest();
+	            var result = '';
+	            xhr.onreadystatechange = function() {
+	            	load.close();
+	                if (xhr.readyState == 4) {
+	                    if (xhr.status == 200) {
+	                        result = 'http://img.haimi.com/' + JSON.parse(xhr.response).hash;
+	                        if (result == '') {
+	                        	
+	                            tips.msg('头像未上传/上传中..');
+	                            return;
+	                        }
+
+	                        $.ajax({
+	                            url: '/api/member/set-seller-profile',
+	                            type: 'post',
+	                            dataType: 'json',
+	                            data: {
+	                                _avatar: result
+	                            },
+	                            complete: function() {
+	                                load.close();
+	                            },
+	                            success: function(data) {
+	                                if (data.flag == 1) {
+
+	                                    tips.msg('修改成功');
+	                                } else {
+	                                    tips.msg(data.msg);
+	                                }
+	                            },
+	                            error: function(xhr) {
+	                                tips.msg('修改失败，刷新后重试' + xhr.status);
+	                            }
+	                        })
+	                    } else {
+	                        tips.msg('上传失败');
+	                    }
+	                }
+	            }
+	            xhr.open("POST", url, true);
+	            xhr.setRequestHeader("Content-Type", "application/octet-stream");
+	            xhr.setRequestHeader("Authorization", "UpToken " + that.token);
+	            xhr.send(pic);
+            });
 		}
 	},
     components: {

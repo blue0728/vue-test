@@ -66,6 +66,7 @@ module.exports = {
 			zepto: 'zepto/zepto',
 			fastclick: 'fastclick',
 			mDialog: 'mDialog/mDialog',
+			lrz: 'lrz/lrz.all.bundle',
 			vue: 'vue/dist/vue',
 			vueResource: 'vue-resource/dist/vue-resource',
 			vueRouter: 'vue-router/dist/vue-router'

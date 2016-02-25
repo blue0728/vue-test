@@ -80,6 +80,18 @@ module.exports = function(router) {
                 require(['./views/forget.vue'], resolve);
             }
         },
+        'favorite': {
+            name: 'favorite',
+            component: function(resolve) {
+                require(['./views/favorite.vue'], resolve);
+            }
+        },
+        'bonus': {
+            name: 'bonus',
+            component: function(resolve) {
+                require(['./views/bonus.vue'], resolve);
+            }
+        },
         'test/test': {
             name: 'test',
             component: function(resolve) {

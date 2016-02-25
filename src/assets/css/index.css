@@ -1,7 +1,4 @@
 /*店铺主页 @robin*/
-.padd {
-    padding-bottom: 2.5rem;
-}
 .profile-info {
     position: relative;
 
@@ -552,3 +549,4 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.index-product:last-child{padding-bottom: 2.5rem;}
